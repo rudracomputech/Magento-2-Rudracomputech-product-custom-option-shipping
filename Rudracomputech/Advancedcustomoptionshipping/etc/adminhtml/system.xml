@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Rudracomputech LLC. All rights reserved.
+ * See COPYING.txt for license details.
+ * http://www.rudracomputech.com | rudracomputechs@gmail.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+       
+        <section id="carriers">
+            <group id="advancedcustomoptionshipping" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Rudracomputech Custom Shipping Rate</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                
+                <field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+					<label>Title</label>
+				</field>
+				<field id="name" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="25" translate="label" type="text">
+					<label>Method name</label>
+				</field>
+                <field id="shipping_type" translate="label comment" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipping Type</label>
+                    <frontend_model>Rudracomputech\Advancedcustomoptionshipping\Block\Adminhtml\System\Config\Form\Field\ShippingList</frontend_model>
+                    <backend_model>Rudracomputech\Advancedcustomoptionshipping\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment>List of locations where customer can pick up ordered item.</comment>
+                </field>
+                <field id="specificerrmsg" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Displayed Error Message</label>
+                </field>
+                
+                
+                <field id="sort_order" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+				<field id="multiplyinventory" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Multiple price with inventory</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				
+				<field id="fixed_size" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="80" translate="label" type="text">
+					<label>Fixed size</label>
+					 <comment>Fixed size like 150.</comment>
+				</field>
+				<field id="fixed_price" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="90" translate="label" type="text">
+					<label>Fixed price</label>
+					 <comment>Fixed price for "equal" or "above" Fixed size.</comment>
+				</field>
+            </group>
+        </section>
+
+    </system>
+</config>

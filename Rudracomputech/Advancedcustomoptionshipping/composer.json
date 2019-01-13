@@ -1,0 +1,22 @@
+{
+    "name": "rudracomputech/module-advancedcustomoptionshipping",
+    "description": "This extension is created under GPL V3 licence and all rights are reserved to Rudracomputech",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Rudracomputech\\Advancedcustomoptionshipping\\": ""
+        }
+    }
+}
